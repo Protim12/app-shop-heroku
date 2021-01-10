@@ -1,0 +1,52 @@
+<!-- header-page -->
+<div class="header-page">
+    <div class="container">
+        <div class="header-padding position-relative">
+            <div class="header-page-title">
+                <h1>Shops</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Shops</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- .end header-page -->
+<!-- product-section -->
+<div class="product-section pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 pb-30">
+                <div class="product-list-header">
+                    <div class="product-list-header-item">
+                        <div class="product-list-result">
+                            <p>Showing 1-9 Of 20 Rresults</p>
+                        </div>
+                    </div>
+                    <div class="product-list-header-item">
+                        <div class="product-list-action">
+                            <div class="product-list-form">
+                                <form>
+                                    <select>
+                                        <option value="default-sorting">Default Sorting</option>
+                                        <option value="popularity">Sort By Popoularity</option>
+                                        <option value="lowtohigh">Sort By Price: Low To High</option>
+                                        <option value="hightolow">Sort By Price: High To Low</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-content">
+                    <app-products></app-products>
+                </div>
+                <app-pagination></app-pagination>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- .end product-section -->

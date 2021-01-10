@@ -1,0 +1,25 @@
+.footer-logo {
+  text-align: center;
+}
+
+.footer-copyright-text {
+  text-align: center;
+}
+
+.footer-copyright-text p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-copyright-text p {
+    font-size: 14px;
+  }
+}
+
+.footer-lower {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #000;
+}
+/*# sourceMappingURL=footer.component.css.map */

@@ -1,0 +1,72 @@
+.page-link {
+  position: relative;
+  padding: 0 0;
+  padding-top: 2px;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -1px;
+  line-height: 1;
+  color: #f83a26;
+  font-size: 15px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 2px;
+  border: 1px solid #1f1f1f;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.page-link:hover {
+  background-color: #f83a26;
+  color: #fff;
+  border-color: #f83a26;
+}
+
+.page-link:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.page-link i {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.page-pagination .pagination {
+  margin-top: -3px;
+}
+
+.page-item {
+  padding: 0 3px;
+  margin-top: 3px;
+}
+
+.page-item:first-child .page-link {
+  border-radius: 2px;
+}
+
+.page-item:last-child .page-link {
+  border-radius: 2px;
+}
+
+.page-item.disabled .page-link {
+  background-color: rgba(59, 59, 59, 0.15);
+  color: #f83a26;
+  border: 1px solid rgba(59, 59, 59, 0.15);
+}
+
+.page-item.active .page-link {
+  background-color: #f83a26;
+  color: #fff;
+  border-color: #f83a26;
+}
+/*# sourceMappingURL=pagination.component.css.map */

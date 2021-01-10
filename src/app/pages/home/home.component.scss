@@ -1,0 +1,77 @@
+$main-color: #f83a26;
+$border: #e7e7e7;
+$title-1: #1f1f1f;
+$placeholder: #838383;
+// $paragraph: #222222;
+
+// media query variable
+$to-tab: "only screen and (max-width : 991px)";
+$to-phone: "only screen and (max-width : 767px)";
+
+
+.bg-header {
+    background-image: url(../../../assets/images/furniture-header-shape.png);
+    background-repeat: no-repeat;
+    background-position: right -245px;
+    background-size: 35%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid $border;
+    @media #{$to-tab} {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+// header-max-width
+.header-max-width {
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    @media #{$to-tab} {
+        max-width: 100%;
+    }
+}
+// header-content-title
+.header-content-title {
+    text-align: center;
+    small {
+        font-size: 20px;
+        font-weight: 400;
+        color: $main-color;
+        margin-bottom: 20px;
+        display: block;
+    }
+    h1 {
+        font-size: 70px;
+        color: $title-1;
+        font-weight: 500;
+        margin-bottom: 15px;
+        span {
+            color: $main-color;
+        }
+    }
+    p {
+        font-size: 17px;
+        font-weight: 400;
+        margin-bottom: 37px;
+    }
+    @media #{$to-tab} {
+        h1 {
+            font-size: 40px;
+        }
+    }
+    @media #{$to-phone} {
+        small {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+    }
+}

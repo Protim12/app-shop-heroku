@@ -1,0 +1,79 @@
+.bg-header {
+  background-image: url(../../../assets/images/furniture-header-shape.png);
+  background-repeat: no-repeat;
+  background-position: right -245px;
+  background-size: 35%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+@media only screen and (max-width: 991px) {
+  .bg-header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.header-max-width {
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 991px) {
+  .header-max-width {
+    max-width: 100%;
+  }
+}
+
+.header-content-title {
+  text-align: center;
+}
+
+.header-content-title small {
+  font-size: 20px;
+  font-weight: 400;
+  color: #f83a26;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.header-content-title h1 {
+  font-size: 70px;
+  color: #1f1f1f;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.header-content-title h1 span {
+  color: #f83a26;
+}
+
+.header-content-title p {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 37px;
+}
+
+@media only screen and (max-width: 991px) {
+  .header-content-title h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header-content-title small {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .header-content-title h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .header-content-title p {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+}
+/*# sourceMappingURL=home.component.css.map */

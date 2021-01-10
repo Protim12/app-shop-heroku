@@ -1,0 +1,271 @@
+<nav>
+    <div class="navbar-area">
+        <div class="mobile-nav">
+            <div class="container-fluid">
+                <div class="mobile-nav-inner">
+                    <a class="navbar-brand" routerLink="/">
+                        <img src="../../../assets/images/logo-red.png" alt="logo" class="logo">
+                    </a>
+                    <div class="mobile-nav-options">
+                        <div class="mobile-nav-dropdown navbar-options-item navbar-options-item-icon">
+                            <a (click)="toggleDot($event)">
+                                <fa-icon [icon]="faEllipsisH"></fa-icon>
+                            </a>
+                            <div class="navbar-option-dropdown" [class.active]="dotActive" (click)="$event.stopPropagation()">
+                                <div class="navbar-options-item navbar-options-item-icon">
+                                    <a (click)="toggleSearch($event)">
+                                        <fa-icon [icon]="faSearch"></fa-icon>
+                                    </a>
+                                    <div class="search-dropdown" [class.searchShow]="searchShow" (click)="$event.stopPropagation()">
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Search...">
+                                                <button><fa-icon [icon]="faSearch"></fa-icon></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="navbar-options-item navbar-options-item-icon">
+                                    <a (click)="viewCartModal()">
+                                        <fa-icon [icon]="faShoppingCart"></fa-icon>
+                                        <span class="navbar-tooltip-badge">2</span>
+                                    </a>
+                                </div>
+                                <div class="navbar-options-item navbar-options-item-icon">
+                                    <a>
+                                        <fa-icon [icon]="faUser"></fa-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-options-item navbar-options-item-icon">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"><fa-icon [icon]="faBars"></fa-icon></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                            <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" [class.active]="router.isActive('/products', true) || router.isActive('/singleProduct', true)">Shop</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li class="nav-item">
+                                        <a routerLink="/products" class="nav-link" routerLinkActive="active">Shops Grid</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a routerLink="/singleProduct" class="nav-link" routerLinkActive="active">Shop Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-nav">
+            <div class="container-fluid p-0">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <!-- <div class="navbar-top">
+                        <div class="container">
+                            <a class="navbar-brand" href="furniture.html">
+                                <img src="assets/images/logo-red.png" alt="logo" class="logo">
+                            </a>
+                            <div class="navbar-top-action">
+                                <div class="navbar-top-action-item navbar-top-right navbar-support">
+                                    <div class="navbar-right-inner">
+                                        <div class="navbar-right-item">
+                                            <div class="navbar-search">
+                                                <form>
+                                                    <select>
+                                                        <option value="one">All Categories</option>
+                                                        <option value="two">Diapers</option>
+                                                        <option value="three">Telcom Powder</option>
+                                                    </select>
+                                                    <div class="navbar-search-input">
+                                                        <div class="form-group">
+                                                            <input type="email" class="form-control" placeholder="Enter Your Keyword">
+                                                            <button class="btn"><span><i class="flaticon-search"></i></span></button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="navbar-right-item">
+                                            <div class="navbar-right-action">
+                                                <div class="navbar-right-action-item navbar-right-account navbar-option-item">
+                                                    <a href="my-account.html"><i class="flaticon-user"></i></a>
+                                                </div>
+                                                <div class="navbar-right-action-item navbar-right-wishlist navbar-option-item">
+                                                    <a href="#" class="productWish">
+                                                        <i class="flaticon-heart"></i>
+                                                        <span class="navbar-tooltip-badge">1</span>
+                                                    </a>
+                                                </div>
+                                                <div class="navbar-right-action-item navbar-right-cart navbar-option-item">
+                                                    <a href="#" class="productCart">
+                                                        <i class="flaticon-shopping-bag"></i>
+                                                        <span class="navbar-tooltip-badge">2</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="navbar-main">
+                        <div class="d-flex justify-content-between align-items-center full-width">
+                            <a class="navbar-brand" routerLink="/">
+                                <img src="../../../assets/images/logo-red.png" alt="logo" class="logo">
+                            </a>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mx-auto">
+                                    <li class="nav-item">
+                                    <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" [class.active]="router.isActive('/products', true) || router.isActive('/singleProduct', true)">Shop</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                            <a routerLink="/products" class="nav-link" routerLinkActive="active">Shops Grid</a>
+                                            </li>
+                                            <li class="nav-item">
+                                            <a routerLink="/singleProduct" class="nav-link" routerLinkActive="active">Shop Details</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent navToMobile" >
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link dropdown-toggle" [class.active]="router.isActive('/products', true) || router.isActive('/singleProduct', true)">Shop</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a routerLink="/products" class="nav-link" routerLinkActive="active">Shops Grid</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a routerLink="/singleProduct" class="nav-link" routerLinkActive="active">Shop Details</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div class="navbar-options">
+                                <div class="navbar-options-item navbar-options-item-icon">
+                                    <a (click)="toggleSearch($event)">
+                                        <fa-icon [icon]="faSearch"></fa-icon>
+                                    </a>
+                                    <div class="search-dropdown" [class.searchShow]="searchShow" (click)="$event.stopPropagation()">
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Search...">
+                                                <button><fa-icon [icon]="faSearch"></fa-icon></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="navbar-options-item navbar-options-item-icon">
+                                    <a (click)="viewCartModal()">
+                                        <fa-icon [icon]="faShoppingCart"></fa-icon>
+                                        <span class="navbar-tooltip-badge">2</span>
+                                    </a>
+                                </div>
+                                <div class="navbar-options-item">
+                                    <a href="authentication.html" class="btn">
+                                        Login / Sign up
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- product-cart -->
+<div class="cart-modal-wrapper" [class.active]="cartModalActive">
+    <div class="cart-modal modal-item">
+        <div class="cart-modal-header">
+            <h3>Cart 2</h3>
+            <div class="cart-modal-close" (click)="closeCartModal()">
+                <fa-icon [icon]="faTimes"></fa-icon>
+            </div>
+        </div>
+        <div class="cart-modal-body">
+            <h2>My Order</h2>
+            <div class="cart-modal-product">
+                <div class="cart-modal-thumb">
+                    <a href="shop-details.html">
+                        <img src="../../../assets/images/product-28.png" alt="product">
+                    </a>
+                </div>
+                <div class="cart-modal-content">
+                    <h4><a href="shop-details.html">Leather Chair</a></h4>
+                    <div class="cart-modal-action">
+                        <div class="cart-modal-action-item">
+                            <div class="cart-modal-quantity">
+                                <p>1</p>
+                                <p>x</p>
+                                <p class="cart-quantity-price">$45</p>
+                            </div>
+                        </div>
+                        <div class="cart-modal-action-item">
+                            <div class="cart-modal-delete">
+                                <a href="#"><i class="bx bxs-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-modal-product">
+                <div class="cart-modal-thumb">
+                    <a href="shop-details.html">
+                        <img src="../../../assets/images/product-30.png" alt="product">
+                    </a>
+                </div>
+                <div class="cart-modal-content">
+                    <h4><a href="shop-details.html">Computer Chair</a></h4>
+                    <div class="cart-modal-action">
+                        <div class="cart-modal-action-item">
+                            <div class="cart-modal-quantity">
+                                <p>1</p>
+                                <p>x</p>
+                                <p class="cart-quantity-price">$35</p>
+                            </div>
+                        </div>
+                        <div class="cart-modal-action-item">
+                            <div class="cart-modal-delete">
+                                <a href="#"><i class="bx bxs-trash"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-modal-total">
+                <h3>Total</h3>
+                <p>$80</p>
+            </div>
+            <div class="cart-modal-button">
+                <a href="checkout.html" class="btn full-width">Proceed To Checkout</a>
+                <a href="cart.html" class="btn btn-black full-width">View Shopping Cart</a>
+            </div>
+            <!-- The commented content in below is currently used "display: none". If no data is in the modal, just add "active" class with it and hide rest of the data. -->
+            <!-- <div class="modal-no-data">
+                <img src="assets/images/empty-shopping-basket.png" alt="empty">
+                <h3>No Data Available</h3>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- .end product-cart -->

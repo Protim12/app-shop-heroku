@@ -1,0 +1,348 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+@media only screen and (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1340px;
+  }
+}
+
+html {
+  scroll-behavior: unset !important;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+p {
+  color: #222222;
+}
+
+a {
+  color: #f83a26;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f83a26;
+}
+
+img {
+  max-width: 100%;
+}
+
+.bg-black {
+  background-color: #1f1f1f;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+@media only screen and (max-width: 991px) {
+  .pt-100 {
+    padding-top: 50px;
+  }
+}
+
+.pb-80 {
+  padding-bottom: 80px;
+}
+
+@media only screen and (max-width: 991px) {
+  .pb-80 {
+    padding-bottom: 30px;
+  }
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+@media only screen and (max-width: 991px) {
+  .pb-70 {
+    padding-bottom: 20px;
+  }
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-bottom: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.breadcrumb .breadcrumb-item {
+  font-size: 17px;
+  font-weight: 500;
+  color: #1f1f1f;
+  padding-left: 0;
+  padding-right: .5rem;
+}
+
+.breadcrumb .breadcrumb-item a {
+  color: #1f1f1f;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.breadcrumb .breadcrumb-item a:hover {
+  color: #f83a26;
+}
+
+.breadcrumb .breadcrumb-item.active {
+  color: #1f1f1f;
+  font-weight: 400;
+}
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item:before {
+  content: "•";
+  color: #1f1f1f;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+  .breadcrumb .breadcrumb-item {
+    font-size: 15px;
+  }
+  .breadcrumb .breadcrumb-item + .breadcrumb-item:before {
+    font-size: 14px;
+  }
+}
+
+.btn {
+  padding: 15px 25px;
+  text-align: center;
+  border-radius: 3px;
+  background: #f83a26;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  border: 2px solid rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  border: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 11px 19.74px 1.26px rgba(248, 58, 38, 0.1);
+          box-shadow: 0px 11px 19.74px 1.26px rgba(248, 58, 38, 0.1);
+}
+
+.btn:focus, .btn:active {
+  -webkit-box-shadow: 0px 11px 19.74px 1.26px rgba(255, 20, 147, 0.16);
+          box-shadow: 0px 11px 19.74px 1.26px rgba(255, 20, 147, 0.16);
+  border: 0;
+}
+
+.btn:hover {
+  background: #eb230d;
+  color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+  .btn {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+}
+
+.btn.btn-black {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.review-star {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.review-star ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+
+.review-star ul li {
+  color: #bebebe;
+  font-size: 15px;
+  margin-right: 5px;
+  list-style: none;
+}
+
+.review-star ul li i {
+  vertical-align: middle;
+}
+
+.review-star ul li.full-star {
+  color: #ff7e00;
+}
+
+.review-star ul li.half-star {
+  color: #ff7e00;
+}
+
+.review-star p {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 0 !important;
+}
+
+.availability-badge {
+  padding: 8px 10px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.availability-badge.availability-badge-success {
+  background-color: #3cb242;
+  color: #fff;
+}
+
+.availability-badge.availability-badge-red {
+  background-color: #f83a26;
+  color: #fff;
+}
+
+.header-padding {
+  padding: 100px 0 100px;
+}
+
+@media only screen and (max-width: 991px) {
+  .header-padding {
+    padding: 50px 0 50px;
+  }
+}
+
+.header-page {
+  background: #ffedeb;
+}
+
+.header-page-title {
+  text-align: center;
+}
+
+.header-page-title h1 {
+  font-size: 60px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #1f1f1f;
+}
+
+@media only screen and (max-width: 991px) {
+  .header-page-title {
+    text-align: center;
+  }
+  .header-page-title h1 {
+    font-size: 50px;
+  }
+  .header-page-title .breadcrumb {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .header-page-title h1 {
+    font-size: 40px;
+  }
+}
+
+.section-title {
+  max-width: 670px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.section-title small {
+  color: #f83a26;
+  font-size: 16px;
+  margin-bottom: 25px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center 25px;
+  background-size: auto;
+}
+
+.section-title h2 {
+  color: #1f1f1f;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.section-title h2 span {
+  color: #f83a26;
+}
+
+.section-title p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.section-title p a {
+  color: #f83a26;
+  border-bottom: 1px solid #f83a26;
+}
+
+@media only screen and (max-width: 991px) {
+  .section-title {
+    margin-bottom: 30px;
+  }
+  .section-title .btn {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .section-title small {
+    margin-bottom: 13px;
+  }
+  .section-title h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .section-title p {
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
